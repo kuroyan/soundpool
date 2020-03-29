@@ -10,7 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var soundPool: SoundPool
-    private var soundOne = 0
+    private var soundON  = 0
+    private var soundOFF = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,25 +36,24 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         // wav をロードしておく （注）soundファイルは小文字で始めないと認識されない
-        soundOne = soundPool.load(this, R.raw.click, 1)
+        soundON = soundPool.load(this, R.raw.select01, 1)
+        soundOFF = soundPool.load(this, R.raw.select02, 1)
 
     }
 
-
     //--
     fun onClickBtn(view: View) {
-        soundPool.play(soundOne, 0.5f, 0.5f, 0, 0, 1.0f)
 
         if( toggleButton.isChecked) {
             switch1.isChecked = true
             switch2.isChecked = true
+            soundPool.play(soundON, 0.5f, 0.5f, 0, 0, 1.0f)
         }
         else
         {
             switch1.isChecked = false
             switch2.isChecked = false
+            soundPool.play(soundOFF, 0.5f, 0.5f, 0, 0, 1.0f)
         }
     }
-
-
 }

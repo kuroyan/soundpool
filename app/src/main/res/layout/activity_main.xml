@@ -16,7 +16,8 @@
         android:text="@string/check1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:checked="false" />
 
     <Switch
         android:id="@+id/switch2"
