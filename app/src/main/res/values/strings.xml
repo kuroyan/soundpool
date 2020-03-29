@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">chackFunction</string>
+    <string name="hello">こんにちは</string>
+    <string name="check1">設定１</string>
+    <string name="check2">設定２</string>
+    <string name="allSetForCheck">全設定</string>
+    <string name="sure">確認</string>
+    <string name="allSetting">全設定</string>
+    <string name="radio1">１</string>
+</resources>
