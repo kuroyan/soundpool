@@ -5,6 +5,7 @@ import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Switch
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //val textView = findViewById(R.id.text_view)
+
 
         //text_view.setText(R.string.hello)
         val audioAttributes = AudioAttributes.Builder()
@@ -47,13 +49,13 @@ class MainActivity : AppCompatActivity() {
         if( toggleButton.isChecked) {
             switch1.isChecked = true
             switch2.isChecked = true
-            soundPool.play(soundON, 0.5f, 0.5f, 0, 0, 1.0f)
+            soundPool.play(soundOFF, 0.5f, 0.5f, 0, 0, 1.0f)
         }
         else
         {
             switch1.isChecked = false
             switch2.isChecked = false
-            soundPool.play(soundOFF, 0.5f, 0.5f, 0, 0, 1.0f)
+            soundPool.play(soundON, 0.5f, 0.5f, 0, 0, 1.0f)
         }
     }
 }
